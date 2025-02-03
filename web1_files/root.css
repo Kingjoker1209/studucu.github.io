@@ -1,0 +1,63 @@
+:root { 
+    
+	/* TYPOGRAPHY */
+	
+    /* paramaters for all typographic scale */
+    --font-size : 16px; /* body desktop font size */
+    --h1-max-font-size : 66; /* H1 max font size */
+    --h2-max-font-size : 44px; /* H2 max font size : to  stop h2-h6 's growth at some point when h1 is getting too big */
+	--h3-max-font-size : 22px;
+	--h4-max-font-size : 18px;
+
+    /* controls headings growth ratio */
+    --font-ratio : calc(var(--h1-max-font-size) / 20); 
+
+    /* minimum font size can't be lower than 14px */
+    --font-size-min : max(14px, (var(--font-size) * .6) );
+
+    /* source : https://www.smashingmagazine.com/2016/05/fluid-typography/ */
+    --body-font-size : clamp(var(--font-size-min), calc( var(--font-size-min) + (24 - 14) * (100vw - 600px) / (900 - 300) ), var(--font-size) );
+
+    /* proportional headings */
+    --h1-font-size : clamp(var(--font-size-min), (var(--font-size-min) + (var(--font-ratio) * 1vw)), (var(--h1-max-font-size) * 1px) );
+    --h2-font-size : clamp( var(--font-size-min), (var(--h1-font-size) * 0.7 ), var(--h2-max-font-size));
+    --h3-font-size : clamp( var(--font-size-min), (var(--h2-font-size) * 0.7 ), var(--h3-max-font-size));
+    --h4-font-size : clamp( var(--font-size-min), (var(--h3-font-size) * 0.8 ), var(--h4-max-font-size));
+    --h5-font-size : max( var(--font-size-min), (var(--h4-font-size) * 0.8 ));
+    --h6-font-size : max( var(--font-size-min), (var(--h5-font-size) * 0.8 ));
+	
+	
+	/* SPACING */	
+	--1sp : clamp( 2px, calc(1px + .18vw), 4px);
+	--2sp : calc( var(--1sp) * 2 );
+	--3sp : calc( var(--1sp) * 3 );
+	--4sp : calc( var(--1sp) * 4 );
+	--5sp : calc( var(--1sp) * 5 );
+	--6sp : calc( var(--1sp) * 6 );
+	--7sp : calc( var(--1sp) * 7 );
+	--8sp : calc( var(--1sp) * 8 );
+	--9sp : calc( var(--1sp) * 9 );
+	--10sp : calc( var(--1sp) * 10 );
+	--12sp : calc( var(--1sp) * 12 );
+	--16sp : calc( var(--1sp) * 16 );
+	--20sp : calc( var(--1sp) * 20 );
+	--24sp : calc( var(--1sp) * 24 );
+	--28sp : calc( var(--1sp) * 28 );
+	--32sp : calc( var(--1sp) * 32 );
+	--36sp : calc( var(--1sp) * 36 );
+	--40sp : calc( var(--1sp) * 40 );
+	--44sp : calc( var(--1sp) * 44 );
+	--50sp : calc( var(--1sp) * 50 );
+	--56sp : calc( var(--1sp) * 56 );
+	--62sp : calc( var(--1sp) * 62 );
+	--72sp : calc( var(--1sp) * 72 );
+	--88sp : calc( var(--1sp) * 88 );
+	
+	
+	/* COLORS */
+	--body-text-color: #0a2744;
+	--button-bg-color: #ffe37d;
+	--button-text-color: #222;
+	}
+
+}

@@ -1,0 +1,70 @@
+
+
+
+/* TABLETS */
+@media screen and (min-width: 768px) {
+	
+    /* ----- TYPOGRAPHY ----- */
+	h1 {
+		line-height: 1;
+		}
+
+	/* LAYOUT */
+	.is-header-sticky .header + .section {
+		padding-top: 60px;	
+		}
+
+	
+	/* MEDIA GRID */
+	.media-grid .media-cell { 
+		width: 50%;
+		}
+	.media-grid.col-1 .media-cell { 
+		width: 100%;
+		}
+	
+}
+
+
+
+
+/* DESKTOPS */
+@media screen and (min-width: 992px) {
+
+	/* MEDIA GRID */
+	.media-grid.col-3 .media-cell,
+	.media-grid.col-4 .media-cell{ 
+		width: 33.33%;
+		}
+	
+	
+	/* HEADER */
+	.header .l-medium {
+		display: flex;
+		}
+	.site-title{
+		margin-bottom: 0; margin-right: auto;
+		}
+	.nav {
+		font-size: 18px; margin: 0;
+		}
+	
+	/* SLIDER */	
+	/* Arrows : show on dekstops */
+	.slick-prev,
+	.slick-next {
+		display: block;
+		}
+	 
+}
+
+
+/* ULTRA HIGH RES DESKTOPS */
+@media screen and (min-width: 1600px) {
+	
+	/* MEDIA GRID */
+	.media-grid.col-4 .media-cell { 
+		width: 25%;
+		}	
+	
+}
